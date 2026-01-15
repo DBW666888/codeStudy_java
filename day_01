@@ -1,0 +1,35 @@
+public class day_01 {
+    public static void main(String[] args) {
+        /*
+        System.out.println("name" + '\t' + "age");
+        System.out.println("tom" + '\t' + 23);
+
+        long n=999999999999L;
+        System.out.println(n);
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("请输入第一个整数:");
+        int num1=sc.nextInt();
+        System.out.println("请输入第二个整数:");
+        int num2=sc.nextInt();
+        System.out.println("两数之和为:");
+        System.out.println(num1+num2);
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("请输入一个百位数：");
+        int n=sc.nextInt();
+        System.out.println("个位数为："+n%10);
+        System.out.println("十位数为："+n/10%10);
+        System.out.println("百位数为："+n/100);
+         */
+        int height1 = 150;
+        int height2 = 210;
+        int height3 = 165;
+
+        int temp = height1 > height2 ? height1 : height2;
+        int max = temp > height3 ? temp : height3;
+        System.out.println(max);
+
+
+    }
+}
