@@ -1,0 +1,66 @@
+import java.util.Random;
+
+public class Game {
+    private String name;
+    private int Hp;
+
+
+    public Game(){}
+    public Game(String name, int Hp) {
+        this.name = name;
+        this.Hp = Hp;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public  String getName() {
+        return name;
+    }
+
+    public void setHp(int Hp){
+        this.Hp = Hp;
+    }
+    public int getHp() {
+        return Hp;
+    }
+
+
+    public void attack(Game role){
+        Random r = new Random();
+        int hurtHp=r.nextInt(20)+1;
+
+        int remainHp=role.getHp()-hurtHp;
+        remainHp=remainHp<0?0:remainHp;
+
+        role.setHp(remainHp);
+
+        System.out.println(this.getName()+"举起拳头，打了"+role.getName()+"一下，" +
+                "造成了"+hurtHp+"点伤害，"+role.getName()+"还剩下了"+remainHp+"点血");
+    }
+
+
+}
+
+
+
+public class GameTest {
+    public static void main(String[] args) {
+       Game r1=new Game("乔峰",100);
+       Game r2=new Game("鸠摩智",100);
+
+       while (true){
+           r1.attack(r2);
+           if(r2.getHp()==0){
+               System.out.println(r1.getName()+"K.O了"+r2.getName());
+               break;
+           }
+
+           r2.attack(r1);
+           if(r1.getHp()==0){
+               System.out.println(r2.getName()+"K.O了"+r1.getName());
+               break;
+           }
+       }
+    }
+}
