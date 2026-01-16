@@ -1,0 +1,143 @@
+public class day_04_exercise {
+    public static void main(String[] args) {
+
+        //getNews();
+        //copyArray();
+
+        /*
+        //评委打分
+        int[] scoreArr=getScores();
+        int sum=0;
+        for (int i=0;i<scoreArr.length;i++){
+            System.out.print(scoreArr[i]+" ");
+            sum+=scoreArr[i];
+        }
+        int max=getMax(scoreArr);
+        int min=getMin(scoreArr);
+        int average=(sum-max-min)/(scoreArr.length-2);
+        System.out.println();
+        System.out.println("总分为："+sum);
+        System.out.println("平均分为："+average);
+
+
+        //数字加密
+        int[] arr={1,9,8,3};
+        for (int i=0;i<arr.length;i++){
+            arr[i]=(arr[i]+5)%10;
+        }
+        for (int i=0,j= arr.length-1;i<j;i++,j--){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+        int number=0;
+        for (int i=0;i<arr.length;i++){
+            number=number*10+arr[i];
+        }
+        System.out.println("加密后为："+number);
+
+
+        //二维数组
+        int[][] arr={{22,66,44},{77,33,88},{25,45,65},{11,66,99}};
+        int yearSum=0;
+        for (int i=0;i<arr.length;i++){
+            int[] quarterSum=arr[i];
+            int sum=getSum(quarterSum);
+            yearSum+=sum;
+            System.out.println("第"+i+"季度的总营业额为："+sum);
+        }
+        System.out.println("全年总营业额为："+yearSum);
+         */
+
+
+    }
+
+    public static int getSum(int[] arr){
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        return sum;
+    }
+
+    /*
+    //评委打分
+    public static int getMax(int[] scoreArr){
+        int max=scoreArr[0];
+        for(int i=0;i<scoreArr.length;i++){
+            if(scoreArr[i]>max){
+                max=scoreArr[i];
+            }
+        }
+        return max;
+    }
+
+    public static int getMin(int[] scoreArr){
+        int min=scoreArr[0];
+        for(int i=0;i<scoreArr.length;i++){
+            if(scoreArr[i]<min){
+                min=scoreArr[i];
+            }
+        }
+        return min;
+    }
+
+    public static int[] getScores(){
+        int[] scores=new int[6];
+        Scanner sc=new Scanner(System.in);
+        for (int i=0;i<scores.length;){
+            System.out.println("评委请打分：");
+            int score=sc.nextInt();
+            if(score>=0 && score<=100){
+                scores[i]=score;
+                i++;
+            }
+            else{
+                System.out.println("请重新输入一个合法的成绩：");
+            }
+
+        }
+        return scores;
+    }
+
+
+    //数组复制
+    public static void copyArray(){
+        int[] arr={1,2,3,4,5};
+        int[] newArr=new int[arr.length];
+        for(int i=0;i< arr.length;i++){
+            newArr[i]=arr[i];
+        }
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.print(newArr[i]+" ");
+        }
+    }
+
+    //随机生成验证码
+    public static void getNews()
+    {
+        char[] arr=new char[52];
+        for (int i = 0; i < arr.length; i++) {
+            if (i<26){
+                arr[i]=(char)(i+'a');
+            }
+            else{
+                arr[i]=(char)(i-26+'A');
+            }
+        }
+
+        String result="";
+        Random r=new Random();
+        for (int i = 0; i < 4; i++) {
+            int randIndex=r.nextInt(arr.length);
+            //System.out.print(arr[randIndex]);
+            result+=arr[randIndex];
+        }
+
+        int number=r.nextInt(10);
+        result+=number;
+        System.out.println(result);
+    }
+     */
+}
+
