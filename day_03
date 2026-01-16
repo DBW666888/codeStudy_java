@@ -1,0 +1,114 @@
+public class day_03 {
+    public static void main(String[] args) {
+        //tourist();
+        //findNum();
+
+
+    }
+
+
+
+    /*
+    //找101~200的质数
+    public static void findNum(){
+        int count = 0;
+        for (int i=101;i<=200;i++){
+            boolean flag = true;
+            for (int j = 2;j<i;j++){
+                if (i%j==0){
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                count++;
+                System.out.println(i+"是第"+count+"个质数");
+            }
+        }
+    }
+
+
+    //买飞机票
+    public static void tourist(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入机票原价：");
+        double ticket = sc.nextInt();
+        System.out.println("请输入月份：");
+        int month = sc.nextInt();
+        System.out.println("请输入舱位（0——头等舱，1——经济舱）：");
+        int seat = sc.nextInt();
+
+        if (month >=5 && month<=10){
+            ticket=newPrice(ticket,seat,0.9,0.85);
+        }
+        else if ((month>=11 && month<=12)||(month>=1 && month<=4)){
+            ticket=newPrice(ticket,seat,0.7,0.65);
+        }
+        System.out.println("最终票价为："+ticket);
+    }
+
+    public static double newPrice(double ticket,int seat,double v1,double v2){
+        if (seat==0){
+            ticket=ticket*v1;
+        }
+        else if (seat==1){
+            ticket=ticket*v2;
+        }
+        return ticket;
+    }
+
+
+    //数组拷贝
+    public static int[] copyArr(int[] arr,int from,int to){
+        int index=0;
+        int[] newArr=new int[to-from];
+        for(int i=from;i<to;i++){
+            newArr[index]=arr[i];
+            index++;
+        }
+        return newArr;
+    }
+
+    //数组值查找
+    public  static boolean ifExit(int[] arr, int num){
+        for (int i=0; i<arr.length; i++){
+            if(arr[i]==num){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //获取最大值
+    public static int getMax(int[] arr){
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] > max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    //打印数组
+    public static void printArr(int[] arr){
+        System.out.print("[");
+        for (int i=0;i<arr.length;i++){
+            if (i==arr.length-1){
+                System.out.print(arr[i]);
+            }
+            else {
+                System.out.print(arr[i]+",");
+            }
+
+        }
+        System.out.println("]");
+    }
+
+
+    public static void sum(double len,double width) {
+        double result=(len+width)*2;
+        System.out.println(result);
+    }
+     */
+}
