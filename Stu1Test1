@@ -1,0 +1,47 @@
+public class Stu1Test1 {
+    /*
+    public static void main(String[] args) {
+        ArrayList<Stu1> list = new ArrayList<>();
+
+        Stu1 s1 = new Stu1("zhangsan", 18);
+        Stu1 s2 = new Stu1("lisi", 19);
+        Stu1 s3 = new Stu1("wangwu", 20);
+
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+
+        for (int i = 0; i <list.size() ; i++) {
+            list.get(i);
+            System.out.println(list.get(i).getName()+","+list.get(i).getAge());
+        }
+    }
+
+
+    public static void main(String[] args) {
+        ArrayList<Stu1> list = new ArrayList<>();
+
+        Stu1 s1 = new Stu1("001","zhangsan", 18);
+        Stu1 s2 = new Stu1("002","lisi", 19);
+        Stu1 s3 = new Stu1("003","wangwu", 20);
+        Stu1 s4 = new Stu1("004","zhaoliu", 21);
+
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+        list.add(s4);
+
+        System.out.println(findIndex(list,"003"));
+
+    }
+
+    public static int findIndex(ArrayList<Stu1> list,String id) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId().equals(id)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+     */
+}
