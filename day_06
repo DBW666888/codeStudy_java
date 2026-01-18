@@ -1,0 +1,51 @@
+public class day_06 {
+    public static void main(String[] args) {
+        /*
+        int[] arr = {1,2,3,4,5};
+        System.out.println(arrToString(arr));//[1,2,3,4,5]
+        StringJoiner sj = new StringJoiner(",","[","]");
+        System.out.println(sj.add("a").add("b").add("c"));
+
+
+        ArrayList<String> list=new ArrayList<>();
+        list.add("aaa");
+        list.add("bbb");
+        list.add("ccc");
+        list.add("ddd");
+
+        //list.remove("aaa");
+        //list.remove(2);
+
+        //list.set(0,"eee");
+
+        //String str=list.get(0);
+        //System.out.println(str);
+
+        for (int i=0;i<list.size();i++) {
+            System.out.println(list.get(i));
+        }
+
+        //System.out.println(list);
+         */
+
+
+
+
+    }
+
+    public static String arrToString(int[] arr) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < arr.length; i++) {
+            if (i==arr.length-1) {
+                sb.append(arr[i]);
+            }
+            else {
+                sb.append(arr[i]+",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+}
