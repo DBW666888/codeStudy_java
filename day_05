@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class day_05 {
+    public static void main(String[] args) {
+        /*
+        String s1="Abc";
+        String s2=new String("abc");
+
+        System.out.println(s1==s2);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.equalsIgnoreCase(s2));
+
+
+        //遍历字符个数
+        Scanner sc=new Scanner(System.in);
+        System.out.println("请输入一个字符：");
+        String str=sc.next();
+        int bigCount=0;
+        int smallCount=0;
+        int numberCount=0;
+        for (int i=0;i<str.length();i++){
+            char c=str.charAt(i);
+            if (c>='A' && c<='Z'){
+                bigCount++;
+            }
+            else if (c>='a' && c<='z'){
+                smallCount++;
+            }
+            else if (c>='0' && c<='9'){
+                numberCount++;
+            }
+        }
+        System.out.println("小写字母有："+smallCount+"个");
+        System.out.println("大写字母有："+bigCount+"个");
+        System.out.println("数字有："+numberCount+"个");
+
+
+        //数组转字符
+        int[] arr= {1,2,3};
+        System.out.println(arrToString(arr));
+
+
+        //字符反转
+        Scanner sc=new Scanner(System.in);
+        System.out.println("请输入一串字符：");
+        String str=sc.next();
+        System.out.println(reverse(str));
+         */
+
+        Scanner sc=new Scanner(System.in);
+        int money;
+        while(true){
+            System.out.println("请输入一个金额：");
+            money=sc.nextInt();
+            if (money>=0 && money<=999999){
+                break;
+            }
+            else{
+                System.out.println("金额无效！");
+            }
+        }
+
+        while (true){
+            int ge=money%10;
+            String moneyCapital=toCapital(ge);
+            System.out.println(moneyCapital);
+            money=money/10;
+
+            if (money==0){
+                break;
+            }
+        }
+
+    }
+
+    public static String toCapital(int number){
+        String[] arr={"零","壹","贰","叁","肆","伍","陆","柒","捌","玖"};
+        return arr[number];
+    }
+
+    public static String reverse(String str){
+        String result="";
+        for (int i=str.length()-1;i>=0;i--){
+            result=result+str.charAt(i);
+        }
+        return result;
+    }
+
+    //数组转字符
+    public static String arrToString(int[] arr){
+        if (arr==null){
+            return "";
+        }
+        if (arr.length==0){
+            return "[]";
+        }
+        String str="[";
+        for (int i=0;i<arr.length;i++){
+            if (i==arr.length-1){
+                str+=arr[i];
+            }
+            else{
+                str=str+arr[i]+",";
+            }
+        }
+        return str+"]";
+    }
+
+}
