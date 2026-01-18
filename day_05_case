@@ -1,0 +1,138 @@
+import java.util.Scanner;
+
+public class login {
+    public static void main(String[] args) {
+        String rightUsername = "zs";
+        String rightPassword = "123456";
+
+        Scanner sc=new Scanner(System.in);
+        for (int i=0; i<3; i++){
+            System.out.println("请输入用户名：");
+            String username = sc.next();
+            System.out.println("请输入密码：");
+            String password = sc.next();
+
+            if(username.equals(rightUsername) && password.equals(rightPassword)){
+                System.out.println("用户登录成功！");
+                break;
+            }
+            else{
+                if (i==2){
+                    System.out.println("错误已达最大次数，账户已被锁定！");
+                }
+                else{
+                    System.out.println("用户登录失败，用户名或密码错误,您还剩下"+(2-i)+"次机会！");}
+
+            }
+        }
+
+    }
+}
+=========================================================================================
+  public class Student {
+    private int id;
+    private String name;
+    private int age;
+
+    public Student() {
+    }
+    public Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+
+
+public class StudentTest1 {
+    public static void main(String[] args) {
+        Student[] arr = new Student[3];
+        Student stu1 = new Student(1,"张三",23);
+        Student stu2 = new Student(2,"李四",24);
+        Student stu3 = new Student(3,"王五",25);
+
+        arr[0] = stu1;
+        arr[1] = stu2;
+        arr[2] = stu3;
+
+        Student  stu4 = new Student(4,"赵六",26);
+
+        boolean flag=ifExit(arr,4);
+        if(flag){
+            System.out.println("id已存在，请修改后再添加！");
+        }
+        else {
+            int count=getCount(arr);
+            if (count==arr.length){
+                Student[] newArr = createArr(arr);
+                newArr[count]=stu4;
+                printArr(newArr);
+            }
+            else {
+                arr[count]=stu4;
+                printArr(arr);
+            }
+        }
+    }
+
+    public static void printArr(Student[] arr){
+        for (int i=0;i<arr.length;i++){
+            if (arr[i]!=null){
+                System.out.println(arr[i].getId()+" "+arr[i].getName()+" "+arr[i].getAge());
+            }
+        }
+    }
+
+    public static Student[] createArr(Student[] arr){
+        Student[] newArr = new Student[arr.length+1];
+        for (int i=0;i<arr.length;i++){
+            newArr[i]=arr[i];
+        }
+        return newArr;
+    }
+
+    public static int getCount(Student[] arr) {
+        int count=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != null) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static boolean ifExit(Student[] arr,int id){
+        for(int i=0;i<arr.length;i++){
+            Student stu = arr[i];
+            if (arr!=null && stu.getId()==id){
+                return true;
+            }
+        }
+        return false;
+    }
+}
