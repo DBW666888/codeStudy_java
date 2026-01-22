@@ -1,0 +1,29 @@
+public class day_07 {
+    public static void main(String[] args) {
+        /*
+        int[] arr={1,2,3,4,5,6,7,8,9,10};
+        String str=ArrayUtil1.printArray(arr);
+        System.out.println(str);
+
+        double[] arr1={1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9};
+        double avg=ArrayUtil1.getAverage(arr1);
+        System.out.println(avg);
+
+
+        ArrayList<Stu2> list=new ArrayList<>();
+        Stu2 s1=new Stu2("张三",18,"男");
+        Stu2 s2=new Stu2("李四",19,"女");
+        Stu2 s3=new Stu2("王五",20,"男");
+
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+
+        int max=StudentUtil1.getMaxAge(list);
+        System.out.println(max);
+         */
+
+
+    }
+
+}
